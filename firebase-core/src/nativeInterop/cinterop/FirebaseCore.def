@@ -1,0 +1,11 @@
+# based on https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseCore.podspec
+language = Objective-C
+package = suntrix.kmp.firebase.core
+modules = FirebaseCore
+compilerOpts = -framework FirebaseCore \
+               -framework GoogleUtilities
+linkerOpts = -framework FirebaseCore \
+             -framework GoogleUtilities
+linkerOpts.ios = -framework UIKit
+linkerOpts.osx = -framework AppKit
+linkerOpts.tvos = -framework UIKit

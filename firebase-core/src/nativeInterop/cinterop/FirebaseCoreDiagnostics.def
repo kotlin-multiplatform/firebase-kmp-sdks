@@ -1,0 +1,12 @@
+# based on https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseCoreDiagnostics.podspec
+language = Objective-C
+package = suntrix.kmp.firebase.core
+modules = FirebaseCoreDiagnostics
+compilerOpts = -framework FirebaseCoreDiagnostics \
+               -framework GoogleDataTransport \
+               -framework GoogleUtilities \
+               -framework nanopb
+linkerOpts = -framework FirebaseCoreDiagnostics \
+             -framework GoogleDataTransport \
+             -framework GoogleUtilities \
+             -framework nanopb
