@@ -1,6 +1,5 @@
 package suntrix.kmp.firebase.core
 
-import android.content.Context
 import suntrix.kmp.firebase.core.internal._appContext
 
 /**
@@ -8,12 +7,11 @@ import suntrix.kmp.firebase.core.internal._appContext
  */
 actual object Firebase {
 
-    actual val app: FirebaseApp?
-        get() = try {
-            FirebaseApp(com.google.firebase.FirebaseApp.getInstance())
-        } catch (exception: IllegalStateException) {
-            null
-        }
+    actual fun app(): FirebaseApp? = try {
+        FirebaseApp(com.google.firebase.FirebaseApp.getInstance())
+    } catch (exception: IllegalStateException) {
+        null
+    }
 
     actual fun app(
         name: String
@@ -23,6 +21,6 @@ actual object Firebase {
         null
     }
 
-    actual val allApps: List<FirebaseApp>
-        get() = com.google.firebase.FirebaseApp.getApps(_appContext).map { FirebaseApp(it) }
+    actual fun allApps(): List<FirebaseApp> =
+        com.google.firebase.FirebaseApp.getApps(_appContext).map { FirebaseApp(it) }
 }

@@ -7,6 +7,8 @@ expect class FirebaseApp {
 
     companion object {
         fun initialize(options: FirebaseOptions): FirebaseApp
+
+        @Throws(IllegalStateException::class)
         fun initialize(name: String, options: FirebaseOptions): FirebaseApp
     }
 

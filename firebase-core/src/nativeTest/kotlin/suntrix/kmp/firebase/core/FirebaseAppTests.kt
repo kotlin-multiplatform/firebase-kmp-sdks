@@ -12,3 +12,5 @@ actual val firebaseOptions: FirebaseOptions = FirebaseOptions(
     storageBucket = "suntrix-firebase-multiplatform.appspot.com",
     projectId = "suntrix-firebase-multiplatform"
 )
+
+actual val defaultAppName: String = "__FIRAPP_DEFAULT"
