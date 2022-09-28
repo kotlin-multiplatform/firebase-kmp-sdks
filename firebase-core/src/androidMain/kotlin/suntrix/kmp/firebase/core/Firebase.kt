@@ -8,11 +8,6 @@ import suntrix.kmp.firebase.core.internal._appContext
  */
 actual object Firebase {
 
-    private var appContext: Context = _appContext
-    internal fun appContextOverride(context: Context) {
-        _appContext = context
-    }
-
     actual val app: FirebaseApp?
         get() = try {
             FirebaseApp(com.google.firebase.FirebaseApp.getInstance())
@@ -29,5 +24,5 @@ actual object Firebase {
     }
 
     actual val allApps: List<FirebaseApp>
-        get() = com.google.firebase.FirebaseApp.getApps(appContext).map { FirebaseApp(it) }
+        get() = com.google.firebase.FirebaseApp.getApps(_appContext).map { FirebaseApp(it) }
 }

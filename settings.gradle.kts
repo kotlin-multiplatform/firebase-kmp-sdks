@@ -31,7 +31,9 @@ dependencyResolutionManagement {
 rootProject.name = "firebase-multiplatform"
 
 include(
+    ":extensions",
     ":firebase-core",
+    ":firebase-installations",
 //    ":firebase-firestore",
 //    ":firebase-functions"
 )

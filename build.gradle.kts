@@ -21,10 +21,13 @@ subprojects {
 
     afterEvaluate {
         dependencies {
+            "commonMainImplementation"("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Kotlinx.COROUTINES}")
+
             "commonTestImplementation"(kotlin("test-common"))
             "commonTestImplementation"(kotlin("test-annotations-common"))
 
             "androidMainImplementation"(project.dependencies.platform("com.google.firebase:firebase-bom:30.5.0"))
+            "androidMainImplementation"("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.Kotlinx.COROUTINES}")
 
             "androidTestImplementation"(kotlin("test-junit"))
             "androidTestImplementation"("junit:junit:${Versions.JUNIT}")

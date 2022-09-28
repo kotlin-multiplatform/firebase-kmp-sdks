@@ -11,35 +11,20 @@ kotlin {
     android()
 
     fun configureNativeTarget(): org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget.() -> Unit = {
-        val firebaseCoreFrameworks = listOf(
-            "FirebaseCore",
-            "GoogleUtilities"
-        )
-
-        val firebaseCoreDiagnosticsFrameworks = listOf(
-            "FirebaseCoreDiagnostics",
-            "GoogleDataTransport",
-            "GoogleUtilities",
-            "nanopb"
+        val frameworks = listOf(
+            "FirebaseInstallations"
         )
 
         compilations.getByName("main") {
-            cinterops.create("FirebaseCore") {
-                configureCarthageFrameworks(rootDir, firebaseCoreFrameworks)
-
-//                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
-            }
-
-            cinterops.create("FirebaseCoreDiagnostics") {
-                configureCarthageFrameworks(rootDir, firebaseCoreDiagnosticsFrameworks)
+            cinterops.create("FirebaseInstallations") {
+                configureCarthageFrameworks(rootDir, frameworks)
 
 //                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
             }
         }
 
         binaries.all {
-            linkCarthageFrameworks(rootDir, firebaseCoreFrameworks)
-            linkCarthageFrameworks(rootDir, firebaseCoreDiagnosticsFrameworks)
+            linkCarthageFrameworks(rootDir, frameworks)
         }
     }
 
@@ -55,10 +40,16 @@ kotlin {
     nativeSourceSets()
 
     sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(project(":extensions"))
+                implementation(project(":firebase-core"))
+            }
+        }
+
         val androidMain by getting {
             dependencies {
-                implementation("androidx.startup:startup-runtime:${Versions.Androidx.STARTUP}")
-                implementation("com.google.firebase:firebase-common-ktx")
+                implementation("com.google.firebase:firebase-installations-ktx")
             }
         }
     }
