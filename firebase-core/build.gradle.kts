@@ -55,11 +55,21 @@ kotlin {
     nativeSourceSets()
 
     sourceSets {
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+
         val androidMain by getting {
             dependencies {
                 implementation("androidx.startup:startup-runtime:${Versions.Androidx.STARTUP}")
                 implementation("com.google.firebase:firebase-common-ktx")
             }
+        }
+
+        val androidInstrumentedTest by getting {
+            dependsOn(commonTest)
         }
     }
 }

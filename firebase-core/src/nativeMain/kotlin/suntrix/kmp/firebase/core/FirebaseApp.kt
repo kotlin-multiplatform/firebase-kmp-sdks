@@ -8,7 +8,7 @@ actual class FirebaseApp internal constructor(val nativeSdk: FIRApp) {
     actual companion object {
         actual fun initialize(
             options: FirebaseOptions
-        ): FirebaseApp = FIRApp.configureWithOptions(options.create()).run { Firebase.app!! }
+        ): FirebaseApp = FIRApp.configureWithOptions(options.create()).run { Firebase.app()!! }
 
         actual fun initialize(
             name: String,

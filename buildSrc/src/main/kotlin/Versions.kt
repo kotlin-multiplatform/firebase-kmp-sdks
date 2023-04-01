@@ -6,6 +6,7 @@ object Versions {
     const val TARGET_ANDROID_SDK = 33
 
     object Androidx {
+        const val CORE = "1.9.0"
         const val STARTUP = "1.1.1"
     }
 
@@ -16,5 +17,5 @@ object Versions {
     }
 
 //    const val FIREBASE_BOM = "30.4.1"
-    const val JUNIT = "4.13.2"
+//    const val JUNIT = "4.13.2"
 }

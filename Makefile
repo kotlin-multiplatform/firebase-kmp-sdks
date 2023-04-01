@@ -1,6 +1,6 @@
-setup:
-    brew install carthage
-    npm install -g firebase-tools
+#setup:
+#    brew install carthage
+#    npm install -g firebase-tools
 
-test:
+start-firebase-emulators:
 	firebase emulators:start --config=./test/firebase.json

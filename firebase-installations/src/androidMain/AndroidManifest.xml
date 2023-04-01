@@ -1,5 +1,1 @@
-<manifest package="suntrix.kmp.firebase.installations">
-
-    <application />
-
-</manifest>
+<manifest package="suntrix.kmp.firebase.installations" />

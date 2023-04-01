@@ -1,2 +1,3 @@
-# firebase-multiplatform
-Kotlin/Native implementation of Firebase SDKs.
+# firebase-sdk
+
+Kotlin Multiplatform implementation of Firebase SDKs.

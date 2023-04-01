@@ -5,7 +5,8 @@ modules = FirebaseCore
 compilerOpts = -framework FirebaseCore \
                -framework GoogleUtilities
 linkerOpts = -framework FirebaseCore \
-             -framework GoogleUtilities
+             -framework GoogleUtilities \
+             -framework Foundation
 linkerOpts.ios = -framework UIKit
 linkerOpts.osx = -framework AppKit
 linkerOpts.tvos = -framework UIKit

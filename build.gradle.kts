@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.CInteropProcess
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.42.0"
+    id("com.github.ben-manes.versions") version "0.46.0"
 }
 
 allprojects {
@@ -26,15 +26,15 @@ subprojects {
             "commonTestImplementation"(kotlin("test-common"))
             "commonTestImplementation"(kotlin("test-annotations-common"))
 
-            "androidMainImplementation"(project.dependencies.platform("com.google.firebase:firebase-bom:30.5.0"))
+            "androidMainImplementation"(project.dependencies.platform("com.google.firebase:firebase-bom:31.2.3"))
             "androidMainImplementation"("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.Kotlinx.COROUTINES}")
 
-            "androidTestImplementation"(kotlin("test-junit"))
-            "androidTestImplementation"("junit:junit:${Versions.JUNIT}")
+            "androidUnitTestImplementation"(kotlin("test-junit"))
+            "androidUnitTestImplementation"("junit:junit:4.13.2")
 
-            "androidAndroidTestImplementation"("androidx.test.ext:junit:1.1.3")
-            "androidAndroidTestImplementation"("androidx.test.ext:junit-ktx:1.1.3")
-            "androidAndroidTestImplementation"("androidx.test:runner:1.4.0")
+            "androidTestImplementation"("androidx.test.ext:junit:1.1.5")
+            "androidTestImplementation"("androidx.test.ext:junit-ktx:1.1.5")
+            "androidTestImplementation"("androidx.test:runner:1.5.2")
         }
     }
 

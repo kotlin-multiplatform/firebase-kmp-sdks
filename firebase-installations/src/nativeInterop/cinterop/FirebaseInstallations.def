@@ -5,8 +5,7 @@ modules = FirebaseInstallations
 compilerOpts = -framework FirebaseCore \
                -framework FirebaseInstallations \
                -framework GoogleUtilities \
-               -framework PromisesObjC \
-               -framework Security
+               -framework PromisesObjC
 linkerOpts = -framework FirebaseCore \
              -framework FirebaseInstallations \
              -framework GoogleUtilities \
