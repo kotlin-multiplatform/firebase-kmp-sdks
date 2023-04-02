@@ -1,13 +1,7 @@
-# based on https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseAnalytics.podspec.json
+# https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseAnalytics.podspec.json
 language = Objective-C
 package = suntrix.kmp.firebase.analytics
 modules = FirebaseAnalytics
-compilerOpts = -framework FirebaseCore \
-               -framework FirebaseInstallations \
-               -framework GoogleUtilities \
-               -framework nanopb
-linkerOpts = -framework FirebaseCore \
-             -framework FirebaseInstallations \
-             -framework GoogleUtilities \
-             -framework nanopb \
+compilerOpts = -framework FirebaseAnalytics
+linkerOpts = -framework FirebaseAnalytics \
              -framework StoreKit

@@ -1,3 +1,7 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import suntrix.kmp.xcframework.configureCarthageFrameworks
+import suntrix.kmp.xcframework.linkCarthageFrameworks
+
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
@@ -10,14 +14,16 @@ android {
 kotlin {
     android()
 
-    fun configureNativeTarget(): org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget.() -> Unit = {
-        val frameworks = listOf(
-            "FirebaseAnalytics"
+    fun configureNativeTarget(): KotlinNativeTarget.() -> Unit = {
+        val frameworks = firebaseCoreFrameworks().plus(
+            listOf(
+                "FirebaseAnalytics"
+            )
         )
 
         compilations.getByName("main") {
             cinterops.create("FirebaseAnalytics") {
-                configureCarthageFrameworks(rootDir, frameworks)
+                configureCarthageFrameworks(target, rootDir, frameworks)
 
 //                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
             }

@@ -1,3 +1,7 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import suntrix.kmp.xcframework.configureCarthageFrameworks
+import suntrix.kmp.xcframework.linkCarthageFrameworks
+
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
@@ -10,36 +14,17 @@ android {
 kotlin {
     android()
 
-    fun configureNativeTarget(): org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget.() -> Unit = {
-        val firebaseCoreFrameworks = listOf(
-            "FirebaseCore",
-            "GoogleUtilities"
-        )
-
-        val firebaseCoreDiagnosticsFrameworks = listOf(
-            "FirebaseCoreDiagnostics",
-            "GoogleDataTransport",
-            "GoogleUtilities",
-            "nanopb"
-        )
-
+    fun configureNativeTarget(): KotlinNativeTarget.() -> Unit = {
         compilations.getByName("main") {
             cinterops.create("FirebaseCore") {
-                configureCarthageFrameworks(rootDir, firebaseCoreFrameworks)
-
-//                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
-            }
-
-            cinterops.create("FirebaseCoreDiagnostics") {
-                configureCarthageFrameworks(rootDir, firebaseCoreDiagnosticsFrameworks)
+                configureCarthageFrameworks(target, rootDir, firebaseCoreFrameworks())
 
 //                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
             }
         }
 
         binaries.all {
-            linkCarthageFrameworks(rootDir, firebaseCoreFrameworks)
-            linkCarthageFrameworks(rootDir, firebaseCoreDiagnosticsFrameworks)
+            linkCarthageFrameworks(rootDir, firebaseCoreFrameworks())
         }
     }
 
