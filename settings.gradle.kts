@@ -33,6 +33,7 @@ include(
     ":firebase-analytics",
 //    ":firebase-auth",
     ":firebase-core",
+    ":firebase-crashlytics",
     ":firebase-installations",
 //    ":firebase-firestore",
 //    ":firebase-functions"

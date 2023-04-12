@@ -1,0 +1,18 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseCrashlytics.podspec
+language = Objective-C
+package = suntrix.kmp.firebase.crashlytics
+modules = FirebaseCrashlytics
+compilerOpts = -framework FirebaseCrashlytics
+linkerOpts = -framework FBLPromises \
+             -framework FirebaseCore \
+             -framework FirebaseInstallations \
+             -framework FirebaseSessions \
+             -framework GoogleDataTransport \
+             -framework GoogleUtilities \
+             -framework nanopb \
+             -framework Security \
+             -lc++ \
+             -lz
+linkerOpts.ios = -framework SystemConfiguration
+linkerOpts.osx = -framework SystemConfiguration
+linkerOpts.tvos = -framework SystemConfiguration

@@ -10,7 +10,7 @@ plugins {
 android {
     multiplatformLibrary()
 
-    namespace = "suntrix.kmp.firebase.analytics"
+    namespace = "suntrix.kmp.firebase.crashlytics"
 }
 
 kotlin {
@@ -19,12 +19,12 @@ kotlin {
     fun configureNativeTarget(): KotlinNativeTarget.() -> Unit = {
         val frameworks = firebaseCoreFrameworks().plus(
             listOf(
-                "FirebaseAnalytics"
+                "FirebaseCrashlytics"
             )
         )
 
         compilations.getByName("main") {
-            cinterops.create("FirebaseAnalytics") {
+            cinterops.create("FirebaseCrashlytics") {
                 configureCarthageFrameworks(target, rootDir, frameworks)
 
 //                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
@@ -50,14 +50,13 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":extensions"))
-                implementation(project(":firebase-core"))
+                api(project(":firebase-core"))
             }
         }
 
         val androidMain by getting {
             dependencies {
-                implementation("androidx.core:core-ktx:${Versions.Androidx.CORE}")
-                implementation("com.google.firebase:firebase-analytics-ktx")
+                implementation("com.google.firebase:firebase-crashlytics-ktx")
             }
         }
     }

@@ -2,8 +2,7 @@
 language = Objective-C
 package = suntrix.kmp.firebase.installations
 modules = FirebaseInstallations
-compilerOpts = -framework FirebaseCore \
-               -framework FirebaseInstallations
+compilerOpts = -framework FirebaseInstallations
 linkerOpts = -framework FBLPromises \
              -framework FirebaseCore \
              -framework FirebaseInstallations \

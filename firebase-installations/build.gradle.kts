@@ -36,8 +36,7 @@ kotlin {
         }
     }
 
-    ios(configure = configureNativeTarget())
-    iosSimulatorArm64("ios", configure = configureNativeTarget())
+    iosWithArm64(configure = configureNativeTarget())
     macosArm64(configure = configureNativeTarget())
     macosX64(configure = configureNativeTarget())
     tvos(configure = configureNativeTarget())
