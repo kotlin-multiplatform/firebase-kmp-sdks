@@ -1,19 +1,14 @@
-# https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseCore.podspec
-# https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseCoreDiagnostics.podspec
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseCore.podspec
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseCoreInternal.podspec
 language = Objective-C
-package = suntrix.kmp.firebase.core
+package = suntrix.kmp.firebase
 modules = FirebaseCore
-compilerOpts = -framework FirebaseCore \
-               -framework FirebaseCoreDiagnostics \
-               -framework GoogleDataTransport \
-               -framework GoogleUtilities \
-               -framework nanopb
+compilerOpts = -framework FirebaseCore
 linkerOpts = -framework FirebaseCore \
-             -framework FirebaseCoreDiagnostics \
-             -framework GoogleDataTransport \
+             -framework FirebaseCoreInternal \
              -framework GoogleUtilities \
-             -framework nanopb \
              -framework Foundation
 linkerOpts.ios = -framework UIKit
 linkerOpts.osx = -framework AppKit
 linkerOpts.tvos = -framework UIKit
+linkerOpts.watchos = -framework WatchKit

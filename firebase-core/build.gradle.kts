@@ -9,6 +9,8 @@ plugins {
 
 android {
     multiplatformLibrary()
+
+    namespace = "suntrix.kmp.firebase.core"
 }
 
 kotlin {
@@ -23,13 +25,15 @@ kotlin {
             }
         }
 
-        binaries.all {
-            linkCarthageFrameworks(rootDir, firebaseCoreFrameworks())
+        binaries {
+            all {
+                linkCarthageFrameworks(rootDir, firebaseCoreFrameworks())
+            }
         }
     }
 
     ios(configure = configureNativeTarget())
-    iosSimulatorArm64(configure = configureNativeTarget())
+    iosSimulatorArm64("ios", configure = configureNativeTarget())
     macosArm64(configure = configureNativeTarget())
     macosX64(configure = configureNativeTarget())
     tvos(configure = configureNativeTarget())

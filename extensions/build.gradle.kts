@@ -5,6 +5,8 @@ plugins {
 
 android {
     multiplatformLibrary()
+
+    namespace = "suntrix.kmp.extensions"
 }
 
 kotlin {

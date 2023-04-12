@@ -1,7 +1,7 @@
 package suntrix.kmp.firebase.installations
 
-import suntrix.kmp.firebase.core.Firebase
-import suntrix.kmp.firebase.core.FirebaseApp
+import suntrix.kmp.firebase.Firebase
+import suntrix.kmp.firebase.FirebaseApp
 
 /**
  * Created by Sebastian Owodzin on 28/09/2022

@@ -1,4 +1,4 @@
-package suntrix.kmp.firebase.core
+package suntrix.kmp.firebase
 
 import kotlin.test.*
 

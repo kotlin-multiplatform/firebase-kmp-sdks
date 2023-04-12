@@ -1,4 +1,4 @@
-package suntrix.kmp.firebase.core.internal
+package suntrix.kmp.firebase.internal
 
 import android.content.Context
 import androidx.startup.Initializer

@@ -1,7 +1,11 @@
-# https://github.com/firebase/firebase-ios-sdk/blob/v8.15.0/FirebaseInstallations.podspec
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseInstallations.podspec
 language = Objective-C
 package = suntrix.kmp.firebase.installations
 modules = FirebaseInstallations
-compilerOpts = -framework FirebaseInstallations
-linkerOpts = -framework FirebaseInstallations \
+compilerOpts = -framework FirebaseCore \
+               -framework FirebaseInstallations
+linkerOpts = -framework FBLPromises \
+             -framework FirebaseCore \
+             -framework FirebaseInstallations \
+             -framework GoogleUtilities \
              -framework Security

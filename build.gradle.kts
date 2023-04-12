@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
 import org.jetbrains.kotlin.gradle.tasks.CInteropProcess
 
 plugins {
@@ -23,13 +24,11 @@ subprojects {
         dependencies {
             "commonMainImplementation"("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Kotlinx.COROUTINES}")
 
-            "commonTestImplementation"(kotlin("test-common"))
-            "commonTestImplementation"(kotlin("test-annotations-common"))
+            "commonTestImplementation"(kotlin("test"))
 
             "androidMainImplementation"(project.dependencies.platform("com.google.firebase:firebase-bom:31.4.0"))
             "androidMainImplementation"("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.Kotlinx.COROUTINES}")
 
-            "androidUnitTestImplementation"(kotlin("test-junit"))
             "androidUnitTestImplementation"("junit:junit:4.13.2")
 
             "androidTestImplementation"("androidx.test.ext:junit:1.1.5")
@@ -37,34 +36,11 @@ subprojects {
             "androidTestImplementation"("androidx.test:runner:1.5.2")
         }
     }
-
-//    tasks {
-//        val carthageDir = projectDir.resolve("src/nativeInterop/cinterop")
-//
-//        if (carthageDir.resolve("Cartfile").exists()) {
-//            listOf("bootstrap", "build", "update").forEach {
-//                register("carthage${it.capitalize()}", Exec::class) {
-//                    group = "carthage"
-//
-//                    executable = "sh"
-//                    args("-c", "/usr/local/bin/carthage $it --cache-builds --project-directory $carthageDir")
-//                }
-//            }
-//
-//            withType(CInteropProcess::class) {
-//                dependsOn("carthageBootstrap")
-//            }
-//
-//            register("carthageClean", Delete::class) {
-//                group = "carthage"
-//
-//                delete(carthageDir)
-//            }
-//        }
-//    }
 }
 
 tasks.register("clean", Delete::class) {
+    dependsOn("carthageClean")
+
     delete(rootProject.buildDir)
 }
 

@@ -1,6 +1,6 @@
-package suntrix.kmp.firebase.core
+package suntrix.kmp.firebase
 
-import suntrix.kmp.firebase.core.internal._appContext
+import suntrix.kmp.firebase.internal._appContext
 
 /**
  * Created by Sebastian Owodzin on 31/08/2020
