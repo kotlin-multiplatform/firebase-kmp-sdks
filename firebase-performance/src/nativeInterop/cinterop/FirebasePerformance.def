@@ -1,0 +1,9 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebasePerformance.podspec
+language = Objective-C
+package = native.FirebasePerformance
+modules = FirebasePerformance
+compilerOpts = -framework FirebasePerformance
+linkerOpts = -framework FirebaseCore \
+             -framework FirebaseInstallations \
+             -framework FirebasePerformance \
+             -framework FirebaseRemoteConfig

@@ -31,10 +31,12 @@ rootProject.name = "firebase-multiplatform"
 include(
     ":extensions",
     ":firebase-analytics",
+    ":firebase-appcheck",
     ":firebase-auth",
     ":firebase-core",
     ":firebase-crashlytics",
     ":firebase-installations",
+    ":firebase-performance",
     ":firebase-remoteconfig",
     ":firebase-storage"
 )

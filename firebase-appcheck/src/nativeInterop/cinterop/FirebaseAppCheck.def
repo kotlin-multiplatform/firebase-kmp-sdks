@@ -1,0 +1,12 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseAppCheck.podspec
+language = Objective-C
+package = native.FirebaseAppCheck
+modules = FirebaseAppCheck
+compilerOpts = -framework FirebaseAppCheck
+linkerOpts = -framework FBLPromises \
+             -framework FirebaseCore \
+             -framework FirebaseAppCheck \
+             -framework GoogleUtilities
+linkerOpts.ios = -framework DeviceCheck
+linkerOpts.osx = -framework DeviceCheck
+linkerOpts.tvos = -framework DeviceCheck

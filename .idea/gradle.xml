@@ -12,10 +12,12 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/extensions" />
             <option value="$PROJECT_DIR$/firebase-analytics" />
+            <option value="$PROJECT_DIR$/firebase-appcheck" />
             <option value="$PROJECT_DIR$/firebase-auth" />
             <option value="$PROJECT_DIR$/firebase-core" />
             <option value="$PROJECT_DIR$/firebase-crashlytics" />
             <option value="$PROJECT_DIR$/firebase-installations" />
+            <option value="$PROJECT_DIR$/firebase-performance" />
             <option value="$PROJECT_DIR$/firebase-remoteconfig" />
             <option value="$PROJECT_DIR$/firebase-storage" />
           </set>
