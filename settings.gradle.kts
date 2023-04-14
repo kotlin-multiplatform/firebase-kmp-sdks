@@ -38,6 +38,8 @@ include(
     ":firebase-crashlytics",
     ":firebase-database",
     ":firebase-dynamiclinks",
+    ":firebase-firestore",
+    ":firebase-functions",
     ":firebase-installations",
     ":firebase-performance",
     ":firebase-remoteconfig",

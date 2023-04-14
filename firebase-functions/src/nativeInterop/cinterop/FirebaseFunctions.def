@@ -1,0 +1,13 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseFunctions.podspec
+language = Objective-C
+package = native.FirebaseFunctions
+modules = FirebaseFunctions
+compilerOpts = -framework FirebaseFunctions
+linkerOpts = -framework FirebaseAppCheckInterop \
+             -framework FirebaseAuthInterop \
+             -framework FirebaseCore \
+             -framework FirebaseCoreExtension \
+             -framework FirebaseFunctions \
+             -framework FirebaseMessagingInterop \
+             -framework FirebaseSharedSwift \
+             -framework GTMSessionFetcher

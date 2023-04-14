@@ -1,0 +1,17 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseFirestore.podspec
+language = Objective-C
+package = native.FirebaseFirestore
+modules = FirebaseFirestore
+compilerOpts = -framework FirebaseFirestore
+linkerOpts = -framework FirebaseCore \
+             -framework FirebaseFirestore \
+             -framework abseil \
+             -framework gRPC-C++ \
+             -framework leveldb-library \
+             -framework nanopb \
+             -lc++
+linkerOpts.ios = -framework SystemConfiguration \
+                 -framework UIKit
+linkerOpts.osx = -framework SystemConfiguration
+linkerOpts.tvos = -framework SystemConfiguration \
+                  -framework UIKit

@@ -19,6 +19,8 @@
             <option value="$PROJECT_DIR$/firebase-crashlytics" />
             <option value="$PROJECT_DIR$/firebase-database" />
             <option value="$PROJECT_DIR$/firebase-dynamiclinks" />
+            <option value="$PROJECT_DIR$/firebase-firestore" />
+            <option value="$PROJECT_DIR$/firebase-functions" />
             <option value="$PROJECT_DIR$/firebase-installations" />
             <option value="$PROJECT_DIR$/firebase-performance" />
             <option value="$PROJECT_DIR$/firebase-remoteconfig" />
