@@ -55,7 +55,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("com.google.firebase:firebase-crashlytics-ktx")
+                implementation("com.google.firebase:firebase-crashlytics")
             }
         }
     }

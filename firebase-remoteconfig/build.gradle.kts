@@ -55,7 +55,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("com.google.firebase:firebase-config-ktx")
+                implementation("com.google.firebase:firebase-config")
             }
         }
     }

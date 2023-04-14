@@ -56,7 +56,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("androidx.core:core-ktx:${Versions.Androidx.CORE}")
-                implementation("com.google.firebase:firebase-analytics-ktx")
+                implementation("com.google.firebase:firebase-analytics")
             }
         }
     }

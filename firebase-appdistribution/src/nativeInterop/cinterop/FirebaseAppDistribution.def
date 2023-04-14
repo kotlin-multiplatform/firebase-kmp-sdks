@@ -1,0 +1,9 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseAppDistribution.podspec
+language = Objective-C
+package = native.FirebaseAppDistribution
+modules = FirebaseAppDistribution
+compilerOpts = -framework FirebaseAppDistribution
+linkerOpts = -framework FirebaseAppDistribution \
+             -framework FirebaseCore \
+             -framework FirebaseInstallations \
+             -framework GoogleUtilities

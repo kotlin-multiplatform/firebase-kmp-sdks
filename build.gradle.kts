@@ -26,7 +26,7 @@ subprojects {
 
             "commonTestImplementation"(kotlin("test"))
 
-            "androidMainImplementation"(project.dependencies.platform("com.google.firebase:firebase-bom:31.4.0"))
+            "androidMainImplementation"(project.dependencies.platform("com.google.firebase:firebase-bom:31.5.0"))
             "androidMainImplementation"("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.Kotlinx.COROUTINES}")
 
             "androidUnitTestImplementation"("junit:junit:4.13.2")

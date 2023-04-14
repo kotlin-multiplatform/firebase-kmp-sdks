@@ -55,7 +55,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("com.google.firebase:firebase-appcheck-ktx")
+                implementation("com.google.firebase:firebase-appcheck")
             }
         }
     }

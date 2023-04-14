@@ -51,7 +51,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("androidx.startup:startup-runtime:${Versions.Androidx.STARTUP}")
-                implementation("com.google.firebase:firebase-common-ktx")
+                implementation("com.google.firebase:firebase-common")
             }
         }
 

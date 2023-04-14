@@ -54,7 +54,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("com.google.firebase:firebase-auth-ktx")
+                implementation("com.google.firebase:firebase-auth")
             }
         }
     }
