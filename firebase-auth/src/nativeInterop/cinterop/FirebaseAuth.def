@@ -1,0 +1,12 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseAuth.podspec
+language = Objective-C
+package = native.FirebaseAuth
+modules = FirebaseAuth FirebaseCore
+compilerOpts = -framework FirebaseAuth
+linkerOpts = -framework FirebaseAppCheckInterop \
+             -framework FirebaseAuth \
+             -framework FirebaseCore \
+             -framework GoogleUtilities \
+             -framework GTMSessionFetcher \
+             -framework Security
+linkerOpts.ios = -framework SafariServices
