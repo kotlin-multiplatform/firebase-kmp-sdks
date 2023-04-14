@@ -9,5 +9,5 @@ import suntrix.kmp.firebase.FirebaseApp
 actual val Firebase.installations: FirebaseInstallations
     get() = FirebaseInstallations(com.google.firebase.installations.FirebaseInstallations.getInstance())
 
-//actual fun Firebase.installations(app: FirebaseApp): FirebaseInstallations =
-//    FirebaseInstallations(com.google.firebase.installations.FirebaseInstallations.getInstance(app.nativeSdk))
+actual fun Firebase.installations(app: FirebaseApp): FirebaseInstallations =
+    FirebaseInstallations(com.google.firebase.installations.FirebaseInstallations.getInstance(app.nativeSdk))

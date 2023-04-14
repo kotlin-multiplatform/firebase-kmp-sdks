@@ -2,6 +2,8 @@ package suntrix.kmp.firebase.installations
 
 import kotlin.coroutines.await
 import kotlin.coroutines.awaitResult
+import native.FirebaseInstallations.FIRInstallations
+import native.FirebaseInstallations.FIRInstallationsAuthTokenResult
 
 /**
  * Created by Sebastian Owodzin on 25/09/2022

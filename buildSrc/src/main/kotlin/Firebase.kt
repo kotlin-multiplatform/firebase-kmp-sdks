@@ -3,15 +3,15 @@
  */
 fun firebaseCoreFrameworks(): List<String> {
     return listOf(
-        "FBLPromises",
-        "FirebaseAnalytics",
-        "FirebaseAnalyticsSwift",
+//        "FBLPromises",
+//        "FirebaseAnalytics",
+//        "FirebaseAnalyticsSwift",
         "FirebaseCore",
         "FirebaseCoreInternal",
-        "FirebaseInstallations",
-        "GoogleAppMeasurement",
-        "GoogleAppMeasurementIdentitySupport",
+//        "FirebaseInstallations",
+//        "GoogleAppMeasurement",
+//        "GoogleAppMeasurementIdentitySupport",
         "GoogleUtilities",
-        "nanopb"
+//        "nanopb"
     )
 }

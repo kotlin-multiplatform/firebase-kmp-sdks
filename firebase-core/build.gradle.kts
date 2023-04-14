@@ -17,18 +17,17 @@ kotlin {
     android()
 
     fun configureNativeTarget(): KotlinNativeTarget.() -> Unit = {
+        val frameworks = firebaseCoreFrameworks()
+
         compilations.getByName("main") {
             cinterops.create("FirebaseCore") {
-                configureCarthageFrameworks(target, rootDir, firebaseCoreFrameworks())
-
-//                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
+                configureCarthageFrameworks(target, rootDir, frameworks)
+                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
             }
         }
 
-        binaries {
-            all {
-                linkCarthageFrameworks(rootDir, firebaseCoreFrameworks())
-            }
+        binaries.all {
+            linkCarthageFrameworks(rootDir, frameworks)
         }
     }
 

@@ -1,6 +1,6 @@
 # https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseAnalytics.podspec
 language = Objective-C
-package = suntrix.kmp.firebase.analytics
+package = native.FirebaseAnalytics
 modules = FirebaseAnalytics
 compilerOpts = -framework FirebaseAnalytics
 linkerOpts = -framework FirebaseAnalytics \

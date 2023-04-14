@@ -31,7 +31,7 @@ rootProject.name = "firebase-multiplatform"
 include(
     ":extensions",
     ":firebase-analytics",
-//    ":firebase-auth",
+    ":firebase-auth",
     ":firebase-core",
     ":firebase-crashlytics",
     ":firebase-installations",

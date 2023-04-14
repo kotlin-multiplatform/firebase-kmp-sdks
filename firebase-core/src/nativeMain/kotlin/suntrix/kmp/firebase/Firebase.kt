@@ -1,5 +1,7 @@
 package suntrix.kmp.firebase
 
+import native.FirebaseCore.FIRApp
+
 /**
  * Created by Sebastian Owodzin on 31/08/2020
  */

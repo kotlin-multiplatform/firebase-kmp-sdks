@@ -1,5 +1,6 @@
 package suntrix.kmp.firebase.analytics
 
+import native.FirebaseAnalytics.FIRAnalytics
 import suntrix.kmp.firebase.Firebase
 
 /**

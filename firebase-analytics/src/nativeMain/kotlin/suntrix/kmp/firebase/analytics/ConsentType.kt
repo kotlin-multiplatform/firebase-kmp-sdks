@@ -1,5 +1,9 @@
 package suntrix.kmp.firebase.analytics
 
+import native.FirebaseAnalytics.FIRConsentType
+import native.FirebaseAnalytics.FIRConsentTypeAdStorage
+import native.FirebaseAnalytics.FIRConsentTypeAnalyticsStorage
+
 /**
  * Created by Sebastian Owodzin on 21/03/2023
  */

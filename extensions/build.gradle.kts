@@ -12,8 +12,7 @@ android {
 kotlin {
     android()
 
-    ios()
-    iosSimulatorArm64()
+    iosWithArm64()
     macosArm64()
     macosX64()
     tvos()

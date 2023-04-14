@@ -26,8 +26,7 @@ kotlin {
         compilations.getByName("main") {
             cinterops.create("FirebaseInstallations") {
                 configureCarthageFrameworks(target, rootDir, frameworks)
-
-//                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
+                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
             }
         }
 

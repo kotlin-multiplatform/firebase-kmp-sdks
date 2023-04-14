@@ -26,8 +26,7 @@ kotlin {
         compilations.getByName("main") {
             cinterops.create("FirebaseAnalytics") {
                 configureCarthageFrameworks(target, rootDir, frameworks)
-
-//                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
+                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
             }
         }
 
@@ -50,7 +49,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":extensions"))
-                implementation(project(":firebase-core"))
+                api(project(":firebase-core"))
             }
         }
 

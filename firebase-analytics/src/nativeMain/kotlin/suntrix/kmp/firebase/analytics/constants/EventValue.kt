@@ -1,6 +1,6 @@
 package suntrix.kmp.firebase.analytics.constants
 
-import suntrix.kmp.firebase.analytics.*
+import native.FirebaseAnalytics.*
 
 /**
  * Created by Sebastian Owodzin on 21/03/2023

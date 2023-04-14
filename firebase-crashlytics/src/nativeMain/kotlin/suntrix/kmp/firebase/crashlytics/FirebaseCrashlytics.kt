@@ -1,9 +1,10 @@
 package suntrix.kmp.firebase.crashlytics
 
+import kotlin.coroutines.awaitResult
+import native.FirebaseCrashlytics.FIRCrashlytics
 import platform.Foundation.NSError
 import platform.Foundation.NSLocalizedDescriptionKey
 import platform.Foundation.NSUnderlyingErrorKey
-import kotlin.coroutines.awaitResult
 
 /**
  * Created by Sebastian Owodzin on 12/04/2023

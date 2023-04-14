@@ -1,6 +1,8 @@
 package suntrix.kmp.firebase.analytics
 
 import kotlin.time.Duration
+import native.FirebaseAnalytics.FIRAnalytics
+import native.FirebaseAnalytics.setConsent
 
 /**
  * Created by Sebastian Owodzin on 21/03/2023

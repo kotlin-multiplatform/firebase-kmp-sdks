@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
  */
 fun KotlinTargetContainerWithNativeShortcuts.iosWithArm64(
     name: String = "ios",
-    configure: KotlinNativeTarget.() -> Unit
+    configure: KotlinNativeTarget.() -> Unit = {}
 ) {
     ios(name, configure)
     iosSimulatorArm64(name, configure)
