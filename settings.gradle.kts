@@ -40,7 +40,9 @@ include(
     ":firebase-dynamiclinks",
     ":firebase-firestore",
     ":firebase-functions",
+    ":firebase-inappmessaging",
     ":firebase-installations",
+    ":firebase-messaging",
     ":firebase-performance",
     ":firebase-remoteconfig",
     ":firebase-storage"

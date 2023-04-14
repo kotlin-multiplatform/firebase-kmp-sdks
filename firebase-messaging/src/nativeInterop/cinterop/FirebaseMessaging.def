@@ -1,0 +1,16 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseMessaging.podspec
+language = Objective-C
+package = native.FirebaseMessaging
+modules = FirebaseMessaging
+compilerOpts = -framework FirebaseMessaging
+linkerOpts = -framework FirebaseCore \
+             -framework FirebaseInstallations \
+             -framework FirebaseMessaging \
+             -framework GoogleDataTransport \
+             -framework GoogleUtilities \
+             -framework UserNotifications \
+             -framework nanopb \
+             -lsqlite3
+linkerOpts.ios = -framework SystemConfiguration
+linkerOpts.osx = -framework SystemConfiguration
+linkerOpts.tvos = -framework SystemConfiguration

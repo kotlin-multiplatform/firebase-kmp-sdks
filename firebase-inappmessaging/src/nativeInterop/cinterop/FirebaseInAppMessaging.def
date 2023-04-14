@@ -1,0 +1,11 @@
+# https://github.com/firebase/firebase-ios-sdk/blob/10.8.0/FirebaseInAppMessaging.podspec
+language = Objective-C
+package = native.FirebaseInAppMessaging
+modules = FirebaseInAppMessaging
+compilerOpts = -framework FirebaseInAppMessaging
+linkerOpts = -framework FirebaseABTesting \
+             -framework FirebaseCore \
+             -framework FirebaseInAppMessaging \
+             -framework FirebaseInstallations \
+             -framework GoogleUtilities \
+             -framework UIKit
