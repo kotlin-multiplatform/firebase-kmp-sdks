@@ -35,6 +35,6 @@ include(
     ":firebase-core",
     ":firebase-crashlytics",
     ":firebase-installations",
-//    ":firebase-firestore",
-//    ":firebase-functions"
+    ":firebase-remoteconfig",
+    ":firebase-storage"
 )
