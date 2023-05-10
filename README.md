@@ -1,4 +1,4 @@
-# Firebase multiplatform SDKs
+# Firebase KMP SDKs
 
 Kotlin Multiplatform implementation of Firebase SDKs.
 

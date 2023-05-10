@@ -12,13 +12,11 @@ android {
 kotlin {
     android()
 
-    iosWithArm64()
+    iosWithSimulatorArm64()
     macosArm64()
     macosX64()
-    tvos()
-    tvosSimulatorArm64()
-//    watchos()
-//    watchosSimulatorArm64()
+    tvosWithSimulatorArm64()
+    watchosWithSimulatorArm64()
 
     nativeSourceSets()
 }

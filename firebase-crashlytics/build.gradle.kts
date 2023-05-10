@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import suntrix.kmp.xcframework.configureCarthageFrameworks
 import suntrix.kmp.xcframework.linkCarthageFrameworks
+import suntrix.kmp.xcframework.setupCInteropWithXCFrameworks
 
 plugins {
     id("com.android.library")
@@ -23,25 +24,23 @@ kotlin {
             )
         )
 
-        compilations.getByName("main") {
-            cinterops.create("FirebaseCrashlytics") {
-                configureCarthageFrameworks(target, rootDir, frameworks)
+//        compilations.getByName("main") {
+//            cinterops.create("FirebaseCrashlytics") {
+//                configureCarthageFrameworks(target, rootDir, frameworks)
 //                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
-            }
-        }
+//            }
+//        }
+//
+//        linkCarthageFrameworks(rootDir, frameworks)
 
-        binaries.all {
-            linkCarthageFrameworks(rootDir, frameworks)
-        }
+        setupCInteropWithXCFrameworks("FirebaseCrashlytics", frameworks, rootDir.resolve("Carthage/Build"))
     }
 
-    iosWithArm64(configure = configureNativeTarget())
+    iosWithSimulatorArm64(configure = configureNativeTarget())
     macosArm64(configure = configureNativeTarget())
     macosX64(configure = configureNativeTarget())
-    tvos(configure = configureNativeTarget())
-    tvosSimulatorArm64(configure = configureNativeTarget())
-//    watchos(configure = configureNativeTarget())
-//    watchosSimulatorArm64(configure = configureNativeTarget())
+    tvosWithSimulatorArm64(configure = configureNativeTarget())
+    watchosWithSimulatorArm64(configure = configureNativeTarget())
 
     nativeSourceSets()
 
