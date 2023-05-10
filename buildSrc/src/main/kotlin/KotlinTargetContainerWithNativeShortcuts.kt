@@ -32,6 +32,6 @@ fun KotlinTargetContainerWithNativeShortcuts.watchosWithSimulatorArm64(
     name: String = "watchos",
     configure: KotlinNativeTarget.() -> Unit = {}
 ) {
-    watchos(name, configure)
-    watchosSimulatorArm64(name, configure)
+//    watchos(name, configure)
+//    watchosSimulatorArm64(name, configure)
 }

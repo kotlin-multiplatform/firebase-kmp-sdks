@@ -11,9 +11,9 @@ object Versions {
     }
 
     object Kotlinx {
-        const val COROUTINES = "1.6.4"
+        const val COROUTINES = "1.7.0"
 //        const val DATETIME = "0.4.0"
-        const val SERIALIZATION = "1.4.0"
+        const val SERIALIZATION = "1.5.0"
     }
 
 //    const val FIREBASE_BOM = "30.4.1"

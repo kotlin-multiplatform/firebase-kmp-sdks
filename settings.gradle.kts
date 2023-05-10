@@ -10,7 +10,7 @@ pluginManagement {
             // Kotlin plugin is already defined in buildSrc/build.gradle.kts
 
 //            if (requested.id.id.startsWith("org.jetbrains.kotlin")) {
-//                useVersion("1.8.0")
+//                useVersion("1.8.21")
 //            }
 
             if (requested.id.id == "org.owasp.dependencycheck") {

@@ -40,10 +40,10 @@ fun KotlinMultiplatformExtension.nativeSourceSets() {
                 "macosX64Main",
                 "tvosMain",
                 "tvosSimulatorArm64Main",
-                "watchosX64Main",
-                "watchosSimulatorArm64Main",
-//                "watchosArm32Main",
-                "watchosArm64Main"
+//                "watchosX64Main",
+//                "watchosSimulatorArm64Main",
+////                "watchosArm32Main",
+//                "watchosArm64Main"
             ).forEach {
                 try {
                     getByName(it).dependsOn(this)
@@ -86,10 +86,10 @@ fun KotlinMultiplatformExtension.nativeSourceSets() {
                 "macosX64Test",
                 "tvosTest",
                 "tvosSimulatorArm64Test",
-                "watchosX64Test",
-                "watchosSimulatorArm64Test",
-//                "watchosArm32Test",
-                "watchosArm64Test"
+//                "watchosX64Test",
+//                "watchosSimulatorArm64Test",
+////                "watchosArm32Test",
+//                "watchosArm64Test"
             ).forEach {
                 try {
                     getByName(it).dependsOn(this)
