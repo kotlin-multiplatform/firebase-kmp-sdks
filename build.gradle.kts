@@ -1,9 +1,13 @@
 import com.android.build.gradle.internal.tasks.factory.dependsOn
 import org.jetbrains.kotlin.gradle.tasks.CInteropProcess
+import suntrix.kmp.xcframework.CarthagePlugin
+import java.util.*
 
 plugins {
     id("com.github.ben-manes.versions") version "0.46.0"
 }
+
+apply<CarthagePlugin>()
 
 allprojects {
     repositories {
@@ -42,27 +46,6 @@ tasks.register("clean", Delete::class) {
     dependsOn("carthageClean")
 
     delete(rootProject.buildDir)
-}
-
-tasks {
-    listOf("bootstrap", "build", "update").forEach {
-        register("carthage${it.capitalize()}", Exec::class) {
-            group = "carthage"
-
-            executable = "sh"
-            args("-c", "/usr/local/bin/carthage $it --cache-builds --project-directory $rootDir")
-        }
-    }
-
-    withType(CInteropProcess::class) {
-        dependsOn("carthageBootstrap")
-    }
-
-    register("carthageClean", Delete::class) {
-        group = "carthage"
-
-        delete(rootDir.resolve("Carthage"))
-    }
 }
 
 tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {

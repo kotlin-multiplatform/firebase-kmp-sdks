@@ -1,6 +1,5 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import suntrix.kmp.xcframework.configureCarthageFrameworks
-import suntrix.kmp.xcframework.linkCarthageFrameworks
+import suntrix.kmp.xcframework.carthageBuildDir
 import suntrix.kmp.xcframework.setupCInteropWithXCFrameworks
 
 plugins {
@@ -24,16 +23,7 @@ kotlin {
             )
         )
 
-//        compilations.getByName("main") {
-//            cinterops.create("FirebaseDynamicLinks") {
-//                configureCarthageFrameworks(target, rootDir, frameworks)
-//                extraOpts = listOf("-compiler-option", "-DNS_FORMAT_ARGUMENT(A)=", "-verbose")
-//            }
-//        }
-//
-//        linkCarthageFrameworks(rootDir, frameworks)
-
-        setupCInteropWithXCFrameworks("FirebaseDynamicLinks", frameworks, rootDir.resolve("Carthage/Build"))
+        setupCInteropWithXCFrameworks("FirebaseDynamicLinks", frameworks, carthageBuildDir())
     }
 
     iosWithSimulatorArm64(configure = configureNativeTarget())
